@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Free CRM Test by Moin" >
+  <test name="Smoke suite 1" >
+    <classes>
+    	<class name="com.crm.qa.testcases.LoginPageTest"/>
+      	<class name="com.crm.qa.testcases.HomePageTest"/>
+    </classes>
+ </test>
+</suite>
