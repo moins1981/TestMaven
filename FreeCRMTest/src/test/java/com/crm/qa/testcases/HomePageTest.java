@@ -18,7 +18,7 @@ public class HomePageTest extends TestBase{
 		public HomePageTest() {
 			super();
 		}
-	
+	//Comments for GIT 
 		@BeforeMethod
 		public void setUp() {
 		initialization();
