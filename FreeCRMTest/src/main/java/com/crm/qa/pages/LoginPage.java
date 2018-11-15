@@ -1,13 +1,10 @@
 package com.crm.qa.pages;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.crm.qa.base.TestBase;
-import com.crm.qa.util.TestUtil;
 
 
 public class LoginPage extends TestBase {
@@ -43,8 +40,8 @@ public class LoginPage extends TestBase {
 	}
 	
 	public HomePage login(String un, String pwd) {
-	username.sendKeys(un);
-	password.sendKeys(pwd);
+	username.sendKeys("username");
+	password.sendKeys("password");
 	loginBtn.click();
 	return new HomePage();
 	}

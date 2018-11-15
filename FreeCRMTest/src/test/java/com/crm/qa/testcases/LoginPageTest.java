@@ -3,16 +3,11 @@ package com.crm.qa.testcases;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
-
-import java.util.concurrent.TimeUnit;
-
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
-
 import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.HomePage;
 import com.crm.qa.pages.LoginPage;
-import com.crm.qa.util.TestUtil;
 
 
 public class LoginPageTest extends TestBase{
