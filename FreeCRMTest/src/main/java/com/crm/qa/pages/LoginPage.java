@@ -1,10 +1,13 @@
 package com.crm.qa.pages;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.crm.qa.base.TestBase;
+import com.crm.qa.util.TestUtil;
 
 
 public class LoginPage extends TestBase {
@@ -32,17 +35,21 @@ public class LoginPage extends TestBase {
 	
 	//Actions
 	public String validateLoginPageTitle() {
+		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		return driver.getTitle();
 	}
 	
 	public boolean validateCRMImage() {
+		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		return crmLogo.isDisplayed();
 	}
 	
 	public HomePage login(String un, String pwd) {
+		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 	username.sendKeys(un);
 	password.sendKeys(pwd);
 	loginBtn.click();
+	driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 	return new HomePage();
 	}
 }

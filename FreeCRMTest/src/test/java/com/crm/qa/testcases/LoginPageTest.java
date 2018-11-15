@@ -32,6 +32,7 @@ public class LoginPageTest extends TestBase{
 		public void loginPageTitleTest() {
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		String title = loginPage.validateLoginPageTitle();
+		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		Assert.assertEquals(title, "#1 Free CRM software in the cloud for sales and service");
 	}
 	
