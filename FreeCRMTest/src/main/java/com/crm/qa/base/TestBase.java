@@ -22,7 +22,7 @@ public class TestBase {
 		
 		try {
 			prop = new Properties();
-			FileInputStream ip= new FileInputStream("/Users/Admin/eclipse-workspace/FreeCRMTest/src/main/java"
+			FileInputStream ip= new FileInputStream("/Users/Admin/git/TestMaven/FreeCRMTest/src/main/java"
 					+ "/com/crm/qa/config/config.properties");
 			prop.load(ip);
 		}
