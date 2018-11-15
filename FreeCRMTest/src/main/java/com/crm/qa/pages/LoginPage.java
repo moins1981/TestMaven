@@ -35,21 +35,17 @@ public class LoginPage extends TestBase {
 	
 	//Actions
 	public String validateLoginPageTitle() {
-		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		return driver.getTitle();
 	}
 	
 	public boolean validateCRMImage() {
-		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		return crmLogo.isDisplayed();
 	}
 	
 	public HomePage login(String un, String pwd) {
-		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 	username.sendKeys(un);
 	password.sendKeys(pwd);
 	loginBtn.click();
-	driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 	return new HomePage();
 	}
 }
