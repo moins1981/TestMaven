@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Free CRM Test by Moin" >
-  <test name="Smoke suite 1" >
+<suite name="Free CRM Test by Moin" parallel ="tests" >
+  <test name="ChromeExecution" >
+  <parameter name="browserName" value = "chrome" />
+    <classes>
+    	<class name="com.crm.qa.testcases.LoginPageTest"/>
+      	<class name="com.crm.qa.testcases.HomePageTest"/>
+    </classes>
+ </test>
+ <test name="FirefoxExecution" >
+ <parameter name="browserName" value = "firefox" />
     <classes>
     	<class name="com.crm.qa.testcases.LoginPageTest"/>
       	<class name="com.crm.qa.testcases.HomePageTest"/>
