@@ -17,8 +17,9 @@ public class LoginPageTest extends TestBase{
 	public LoginPageTest() {
 		super();
 	}
-	@Parameters("browserName")
+	
 	@BeforeMethod
+	@Parameters({"browser"}) 
 		public void setUp() {
 		initialization();
 		loginPage = new LoginPage();	
