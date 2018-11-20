@@ -73,5 +73,17 @@
 	<classpathentry kind="lib" path="C:/jar_files/xalan-2.7.2.jar"/>
 	<classpathentry kind="lib" path="C:/jar_files/xercesImpl-2.11.0.jar"/>
 	<classpathentry kind="lib" path="C:/jar_files/xml-apis-1.4.01.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Admin/Downloads/jar_files/bson-3.3.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Admin/Downloads/jar_files/commons-codec-1.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Admin/Downloads/jar_files/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Admin/Downloads/jar_files/freemarker-2.3.23.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Admin/Downloads/jar_files/gson-2.8.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Admin/Downloads/jar_files/httpclient-4.5.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Admin/Downloads/jar_files/httpcore-4.4.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Admin/Downloads/jar_files/httpmime-4.5.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Admin/Downloads/jar_files/jsoup-1.9.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Admin/Downloads/jar_files/mongodb-driver-3.3.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Admin/Downloads/jar_files/mongodb-driver-core-3.3.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Admin/Downloads/extentreports-java-2.41.2/extentreports-java-2.41.2/extentreports-2.41.2.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

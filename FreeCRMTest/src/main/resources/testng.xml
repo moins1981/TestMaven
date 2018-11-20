@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Free CRM Test by Moin" parallel ="tests">
+<listeners>
+    <listener class-name="com.crm.qa.ExtentReportListner.ExtentReporterNG" />
+</listeners>
   <test name="ChromeExecution" >
   <parameter name="browserName" value = "chrome" />
     <classes>
