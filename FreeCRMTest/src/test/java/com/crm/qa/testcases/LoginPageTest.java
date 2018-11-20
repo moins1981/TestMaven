@@ -47,7 +47,6 @@ public class LoginPageTest extends TestBase{
 			driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 			driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
-		
 	}
 	
 	@AfterMethod	

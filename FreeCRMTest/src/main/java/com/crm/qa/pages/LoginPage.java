@@ -1,10 +1,13 @@
 package com.crm.qa.pages;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.crm.qa.base.TestBase;
+import com.crm.qa.util.TestUtil;
 
 
 public class LoginPage extends TestBase {
@@ -16,7 +19,7 @@ public class LoginPage extends TestBase {
 	@FindBy(name="password")
 	WebElement password;
 	
-	@FindBy(xpath="//input[@value='login']")
+	@FindBy(xpath="//input[@type='submit'][@value='Login']")
 	WebElement loginBtn;
 
 	@FindBy(xpath="/html/body/div[2]/div/div[2]/ul/li[2]/a/font")
@@ -42,6 +45,8 @@ public class LoginPage extends TestBase {
 	public HomePage login(String un, String pwd) {
 	username.sendKeys("username");
 	password.sendKeys("password");
+	driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
+	driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 	loginBtn.click();
 	return new HomePage();
 	}
