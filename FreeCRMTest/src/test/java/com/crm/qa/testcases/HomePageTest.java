@@ -29,7 +29,7 @@ public class HomePageTest extends TestBase{
 		homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 	}
 		
-		@Test(dependsOnMethods = { "loginTest" })
+		@Test(priority=4)
 		public void verifyHomePageTest(){
 			driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 			driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
