@@ -36,11 +36,11 @@ public class TestBase {
 	// Initialization method - Read the property of browser
 	public static void initialization() {
 		String browserName = prop.getProperty("browser");
-		if(browserName.equals("chrome")) {
+		if(browserName.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.driver", "/Users/Admin/Downloads/chromedriver.exe");
 			driver = new ChromeDriver();
 		} else 
-			if(browserName.equals("FF")) {
+			if(browserName.equalsIgnoreCase("firefox")) {
 				System.setProperty("webdriver.gecko.driver", "/Users/Admin/Downloads/geckodriver.exe");
 				driver = new FirefoxDriver();
 	}

@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Free CRM Test by Moin]">
-  <test name="Smoke suite 1(failed)">
+<suite name="Failed suite [Free CRM Test by Moin]" parallel="tests">
+  <test name="FirefoxExecution(failed)" parallel="tests">
+    <parameter name="browserName" value="firefox"/>
     <classes>
+      <class name="com.crm.qa.testcases.LoginPageTest">
+        <methods>
+          <include name="validatecrmLogoTest"/>
+          <include name="setUp"/>
+          <include name="exit"/>
+          <include name="loginPageTitleTest"/>
+          <include name="loginTest"/>
+        </methods>
+      </class> <!-- com.crm.qa.testcases.LoginPageTest -->
       <class name="com.crm.qa.testcases.HomePageTest">
         <methods>
           <include name="setUp"/>
@@ -10,13 +20,27 @@
           <include name="verifyHomePageTest"/>
         </methods>
       </class> <!-- com.crm.qa.testcases.HomePageTest -->
+    </classes>
+  </test> <!-- FirefoxExecution(failed) -->
+  <test name="ChromeExecution(failed)" parallel="tests">
+    <parameter name="browserName" value="chrome"/>
+    <classes>
       <class name="com.crm.qa.testcases.LoginPageTest">
         <methods>
+          <include name="validatecrmLogoTest"/>
           <include name="setUp"/>
           <include name="exit"/>
+          <include name="loginPageTitleTest"/>
           <include name="loginTest"/>
         </methods>
       </class> <!-- com.crm.qa.testcases.LoginPageTest -->
+      <class name="com.crm.qa.testcases.HomePageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="verifyHomePageTest"/>
+        </methods>
+      </class> <!-- com.crm.qa.testcases.HomePageTest -->
     </classes>
-  </test> <!-- Smoke suite 1(failed) -->
+  </test> <!-- ChromeExecution(failed) -->
 </suite> <!-- Failed suite [Free CRM Test by Moin] -->
