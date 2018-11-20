@@ -29,11 +29,12 @@ public class HomePageTest extends TestBase{
 		homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 	}
 		
-		@Test
+		@Test(dependsOnMethods = { "loginTest" })
 		public void verifyHomePageTest(){
+			driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 			driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 			String homePageTitle = homePage.verifyhomepageTitle();
-			Assert.assertEquals(homePageTitle, "CRMPRO", "Home Page Title is not matching");
+			Assert.assertEquals(homePageTitle, "#1 Free CRM software in the cloud for sales and service", "Home Page Title is not matching");
 		}
 		
 		@AfterMethod
