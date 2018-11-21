@@ -20,10 +20,11 @@ import com.relevantcodes.extentreports.LogStatus;
 public class ExtentReporterNG implements IReporter {
 	private ExtentReports extent;
 
+	@Override
 	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites,
 			String outputDirectory) {
 		extent = new ExtentReports(outputDirectory + File.separator
-				+ "Extent.html", true);
+				+ "Extent1.html", true);
 
 		for (ISuite suite : suites) {
 			Map<String, ISuiteResult> result = suite.getResults();
